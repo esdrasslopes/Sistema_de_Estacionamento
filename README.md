@@ -24,7 +24,7 @@ Este projeto é um sistema de gerenciamento de estacionamento com as seguintes f
 ## Funcionalidades
 
 - **Usuários**: 
-  - Registro com e-mail e senha.
+  - Registro com nome,e-mail e senha.
   
 - **Estacionamento**:
   - Reservar vagas no estacionamento.
