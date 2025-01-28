@@ -1,0 +1,146 @@
+.payment-container {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.car-info {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.car-details p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.car-details strong {
+  color: #333;
+}
+
+.payment-container h1 {
+  margin-bottom: 1rem;
+  color: #ff5e00;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-options button {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.payment-options button:hover {
+  background-color: #f8f8f8;
+}
+
+.payment-options button i {
+  font-size: 1.3rem;
+}
+
+.payment-options button span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.credit i {
+  color: #007bff;
+}
+
+.bank-slip i {
+  color: #28a745;
+}
+
+.pix i {
+  color: #6f42c1;
+}
+
+.credit-container,
+.bankslip-container,
+.qr-code-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.bankslip-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-container img {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.credit-container h2,
+.bankslip-container h2,
+.qr-code-container h2 {
+  margin: 1rem 0;
+}
+
+.credit-container .form-control {
+  margin-bottom: 1rem;
+}
+
+.credit-container .form-control input {
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+.credit-container .submit-button,
+.bankslip-container .submit-button,
+.qr-code-container .submit-button {
+  padding: 0.8rem 1.7rem;
+  background-color: #ff5e00;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 4px 3px rgba(255, 94, 0, 0.6);
+  transition: 0.4s;
+  opacity: 0.9;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.bankslip-container .generate-button {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.bankslip-container .generate-button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.credit-container .submit-button:hover,
+.bankslip-container .submit-button:hover {
+  opacity: 1;
+}
+
+.bankslip-container p {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,38 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  max-width: 700px;
+  width: 90%;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-container h1 {
+  color: #ff5e00;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-container p {
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: #ff5e00;
+}
+
+.contact-info ul {
+  list-style: none;
+  text-align: center;
+}
+
+.contact-info ul a {
+  text-decoration: none;
+  color: #ff5e00;
+}

@@ -1,0 +1,75 @@
+.slogan {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.car {
+  height: 420px;
+  width: 60%;
+}
+
+.car img {
+  width: 100%;
+}
+
+.info {
+  width: 40%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.info h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #ff5e00;
+}
+
+.info h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .car,
+  .info {
+    height: 250px;
+  }
+}
+
+@media (max-width: 425px) {
+  .slogan {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .car,
+  .info {
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info {
+    top: 10rem;
+    position: absolute;
+  }
+}
+
+@media (max-width: 320px) {
+  .info h1 {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
+}

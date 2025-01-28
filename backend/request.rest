@@ -1,0 +1,51 @@
+POST http://localhost:3000/api/park
+Content-Type: application/json
+
+{
+  "carModel": "Fusca",
+  "carBrand": "Volkswagen",
+  "carPlate": "ABC-1234",
+  "vacancyNumber": 5,
+  "entryTime": "2025-01-19",
+  "exitTime": "2025-01-20",
+  "id": "2"
+}
+
+###
+GET  http://localhost:3000/api/park
+
+###
+GET http://localhost:3000/api/park/679134a5d3b34afe6cf2c3ec
+
+###
+DELETE http://localhost:3000/api/park/678d5508b57d9a6ce9a10c53
+
+###
+PUT  http://localhost:3000/api/park/678da65ac9c53aaebb8e754a
+Content-Type: application/json
+
+{
+  "carOwner": "Esdras",
+  "ownerDocument": "12345678901",
+  "carModel": "Cronos",
+  "carBrand": "Fiat",
+  "carPlate": "JKN-1234",
+  "vacancyNumber": 5,
+  "entryTime": "2025-01-19",
+  "exitTime": "2025-01-20"
+}
+
+###
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+  "name": "Esdras Lopes Rocha",
+  "email": "emaildoesdrasr@gmail.com",
+  "userDocument": "083.343.271-02",
+  "password": "jardim22",
+  "confirmPassword": "jardim22"
+}
+
+###
+GET http://localhost:3000/api/user
