@@ -24,8 +24,8 @@ const Edit = () => {
     carBrand: "",
     carPlate: "",
     vacancyNumber: "",
-    entryTime: "",
-    exitTime: "",
+    entryDate: "",
+    exitDate: "",
   });
 
   const handlePark = async () => {
@@ -140,28 +140,28 @@ const Edit = () => {
 
           <div className="form-control">
             <label htmlFor="entry">
-              <i className="fa fa-calendar"></i>Entry Time <span>*</span>
+              <i className="fa fa-calendar"></i>Entry Date <span>*</span>
             </label>
             <input
               type="text"
               placeholder="12/05/2024"
-              value={carDetails.entryTime}
+              value={carDetails.entryDate}
               onChange={(e) =>
-                setCarDetails({ ...carDetails, entryTime: e.target.value })
+                setCarDetails({ ...carDetails, entryDate: e.target.value })
               }
             />
           </div>
 
           <div className="form-control">
             <label htmlFor="entry">
-              <i className="fa fa-calendar"></i>Exit Time <span>*</span>
+              <i className="fa fa-calendar"></i>Exit Date <span>*</span>
             </label>
             <input
               type="text"
               placeholder="14/05/2024"
-              value={carDetails.exitTime}
+              value={carDetails.exitDate}
               onChange={(e) =>
-                setCarDetails({ ...carDetails, exitTime: e.target.value })
+                setCarDetails({ ...carDetails, exitDate: e.target.value })
               }
             />
           </div>

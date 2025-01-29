@@ -10,8 +10,8 @@ const parkController = {
         carBrand: req.body.carBrand,
         carPlate: req.body.carPlate,
         vacancyNumber: req.body.vacancyNumber,
-        entryTime: req.body.entryTime,
-        exitTime: req.body.exitTime,
+        entryDate: req.body.entryDate,
+        exitDate: req.body.exitDate,
         userID: req.body.id
       };
 
@@ -63,8 +63,8 @@ const parkController = {
         carBrand: req.body.carBrand,
         carPlate: req.body.carPlate,
         vacancyNumber: req.body.carPark,
-        entryTime: req.body.entryTime,
-        exitTime: req.body.exitTime,
+        entryDate: req.body.entryDate,
+        exitDate: req.body.exitDate,
         userID: req.body.id
       };
 

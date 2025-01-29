@@ -20,11 +20,11 @@ const parkSchema = new Schema({
     type: String,
     required: true,
   },
-  entryTime: {
+  entryDate: {
     type: String,
     required: true,
   },
-  exitTime: {
+  exitDate: {
     type: String,
     required: true,
   },
