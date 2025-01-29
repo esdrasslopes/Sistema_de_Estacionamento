@@ -42,7 +42,7 @@ const Pay = () => {
   };
 
   useEffect(() => {
-    calculatePrice(data.entryTime, data.exitTime);
+    calculatePrice(data.entryDate, data.exitDate);
   }, [data]);
 
   return (
@@ -59,7 +59,7 @@ const Pay = () => {
           </p>
           <p>
             <strong>Price: $</strong>
-            {price} from {data.entryTime} to {data.exitTime}
+            {price} from {data.entryDate} to {data.exitDate}
           </p>
         </div>
       </div>

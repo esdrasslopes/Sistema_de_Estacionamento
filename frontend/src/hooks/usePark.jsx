@@ -16,12 +16,12 @@ export const usePark = () => {
   const [userPark, setUserPark] = useState([]);
 
   const handleFilter = (parkObject, parks) => {
-    const entryTime = parkObject.entryTime;
+    const entryDate = parkObject.entryDate;
     const vacancyNumber = parkObject.vacancyNumber;
 
     return parks.some(
       (park) =>
-        park.vacancyNumber === vacancyNumber && park.entryTime === entryTime
+        park.vacancyNumber === vacancyNumber && park.entryDate === entryDate
     );
   };
 
@@ -81,8 +81,8 @@ export const usePark = () => {
         carBrand: parkObject.carBrand,
         carPlate: parkObject.carPlate,
         vacancyNumber: parkObject.vacancyNumber,
-        entryTime: parkObject.entryTime,
-        exitTime: parkObject.exitTime,
+        entryDate: parkObject.entryDate,
+        exitDate: parkObject.exitDate,
         id: data[0]._id,
       };
 

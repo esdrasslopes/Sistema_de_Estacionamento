@@ -29,14 +29,15 @@ const Form = () => {
 
   const [vacancyNumber, setVacancyNumber] = useState(1);
 
-  const [entryTime, setEntryTime] = useState("");
+  const [entryDate, setEntryDate] = useState("");
 
-  const [exitTime, setExitTime] = useState("");
+  const [exitDate, setExitDate] = useState("");
 
   const { error, handlePost, userPark } = usePark();
 
   function createVacancy() {
     const vacancies = [];
+    
     for (let i = 1; i <= 50; i++) {
       vacancies.push(i);
     }
@@ -55,14 +56,14 @@ const Form = () => {
       !carBrand ||
       !carPlate ||
       !vacancyNumber ||
-      !entryTime ||
-      !exitTime
+      !entryDate ||
+      !exitDate
     )
       return;
 
-    const dateInit = new Date(entryTime);
+    const dateInit = new Date(entryDate);
 
-    const dateExit = new Date(exitTime);
+    const dateExit = new Date(exitDate);
 
     dateInit.setHours(0, 0, 0, 0);
     dateExit.setHours(0, 0, 0, 0);
@@ -85,8 +86,8 @@ const Form = () => {
       carBrand,
       carPlate,
       vacancyNumber,
-      entryTime,
-      exitTime,
+      entryDate,
+      exitDate,
     };
 
     setParkData({ ...parkInfo });
@@ -180,8 +181,8 @@ const Form = () => {
             <input
               type="text"
               placeholder="12/05/2024"
-              onChange={(e) => setEntryTime(e.target.value)}
-              value={entryTime}
+              onChange={(e) => setEntryDate(e.target.value)}
+              value={entryDate}
             />
           </div>
 
@@ -192,8 +193,8 @@ const Form = () => {
             <input
               type="text"
               placeholder="14/05/2024"
-              onChange={(e) => setExitTime(e.target.value)}
-              value={exitTime}
+              onChange={(e) => setExitDate(e.target.value)}
+              value={exitDate}
             />
           </div>
         </div>
