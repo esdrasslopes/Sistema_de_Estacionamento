@@ -17,9 +17,13 @@ const Register = () => {
   const { data: dataContext, setData } = useContext(ParkContext);
 
   const [name, setName] = useState("");
+
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+
   const [confirmPassword, setConfirmPassword] = useState("");
+
   const { data, httpConfig, error } = useFetch("/user");
 
   const handleSubmit = async (e) => {
@@ -65,7 +69,7 @@ const Register = () => {
       setEmail("");
 
       setPassword("");
-      
+
       setConfirmPassword("");
 
       navigate("/park/form");

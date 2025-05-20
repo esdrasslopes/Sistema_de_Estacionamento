@@ -5,8 +5,7 @@ import { ParkContext } from "../context/park";
 import { parkFetch } from "../axios/config";
 
 export const useLogin = () => {
-  const { data: dataContext, setData: setDataContext } =
-    useContext(ParkContext);
+  const { setData: setDataContext, setUser } = useContext(ParkContext);
 
   const [data, setData] = useState(null);
 
@@ -27,8 +26,6 @@ export const useLogin = () => {
         (u) => u.email === user.email && u.password === user.password
       );
 
-      console.log(userFiltered);
-
       if (!userFiltered) {
         setError("User not found or invalid credentials");
         setData(null);
@@ -37,10 +34,13 @@ export const useLogin = () => {
 
       setDataContext((prev) => ({ ...prev, id: userFiltered._id }));
 
+      setUser(true);
+
       setData(userFiltered);
 
       setError(null);
     } catch (error) {
+      console.log(error);
       setError("Data not found");
       setData(null);
     }
