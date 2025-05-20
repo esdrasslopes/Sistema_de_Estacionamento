@@ -15,7 +15,7 @@ import "./Form.css";
 const Form = () => {
   const navigate = useNavigate();
 
-  const { data, setData } = useContext(ParkContext);
+  const { setData } = useContext(ParkContext);
 
   const [parkData, setParkData] = useState({});
 
@@ -37,7 +37,7 @@ const Form = () => {
 
   function createVacancy() {
     const vacancies = [];
-    
+
     for (let i = 1; i <= 50; i++) {
       vacancies.push(i);
     }
@@ -99,13 +99,15 @@ const Form = () => {
     if (error) {
       useToast(error, "error");
     }
+  }, [error]);
 
+  useEffect(() => {
     if (userPark.length > 0) {
       useToast("Parking spot successfully reserved!");
       setData((prev) => ({ ...prev, ...parkData }));
       navigate(`/pay`);
     }
-  }, [error, userPark, parkData]);
+  }, [userPark, parkData, navigate, setData]);
 
   return (
     <div className="park-form">

@@ -2,16 +2,26 @@ import { useState, useContext, useEffect } from "react";
 
 import { ParkContext } from "../context/park";
 
-import { parse, format } from "date-fns";
+import { parse } from "date-fns";
+
+import { useNavigate } from "react-router-dom";
 
 import "./Pay.css";
 
 const Pay = () => {
   const [paymentMethod, setPaymentMethod] = useState();
 
-  const { data, setData } = useContext(ParkContext);
+  const { data, user } = useContext(ParkContext);
 
   const [price, setPrice] = useState();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handlePayment = (method) => {
     setPaymentMethod(method);
@@ -19,13 +29,11 @@ const Pay = () => {
 
   const calculatePrice = (entryDate, exitDate) => {
     const date = parse(entryDate, "dd/MM/yyyy", new Date());
+
     const exit = parse(exitDate, "dd/MM/yyyy", new Date());
 
     date.setHours(0, 0, 0, 0);
     exit.setHours(0, 0, 0, 0);
-
-    console.log("Entrada formatada:", date);
-    console.log("Saída formatada:", exit);
 
     const differenceInTime = exit - date;
 

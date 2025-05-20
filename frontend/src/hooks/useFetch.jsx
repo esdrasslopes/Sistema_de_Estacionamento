@@ -1,11 +1,19 @@
 import { parkFetch } from "../axios/config";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useContext } from "react";
+
+import { ParkContext } from "../context/park";
 
 export const useFetch = (url) => {
   const [config, setConfig] = useState(null);
+
   const [error, setError] = useState(null);
+
   const [data, setData] = useState(null);
+
   const [allData, setAllData] = useState(null);
+
+  const { setUser } = useContext(ParkContext);
 
   useEffect(() => {
     const getAll = async () => {
@@ -54,6 +62,9 @@ export const useFetch = (url) => {
       }
 
       const res = await parkFetch(config);
+
+      setUser(true);
+
       setData(res.data);
     } catch (error) {
       console.error("Error during HTTP request:", error);

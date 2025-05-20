@@ -13,9 +13,15 @@ import "./Edit.css";
 const Edit = () => {
   const { id } = useParams();
 
-  const { data } = useContext(ParkContext);
+  const { data, user } = useContext(ParkContext);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const [numVacancy, setNumVacancy] = useState([]);
 
