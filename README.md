@@ -32,3 +32,12 @@ Este projeto é um sistema de gerenciamento de estacionamento com as seguintes f
   
 - **Administração**:
   - Usuários podem editar ou excluir vagas cadastradas de acordo com seu registro.
+ 
+
+## Como utilizar
+- Utilize tanto na pasta backend quanto na pasta frontend o comando npm install para instalar as dependências do projeto
+- Crie um banco no MongoDB Atlas.
+- No arquivo conn.js do backend, insira a string de conexão fornecida pelo MongoDB Atlas.
+
+
+
